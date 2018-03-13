@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>index</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/libs/animate.css">
+  <style>
+    .row::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+      float: left;
+      /* padding: 15px; */
+      /* border: 1px solid red; */
+    }
+
+    /* 스마트폰 0~767px xs*/
+
+    @media (max-width:767px) {
+      .col-xs-1 {
+        width: 8.33%;
+      }
+      .col-xs-2 {
+        width: 16.66%;
+      }
+      .col-xs-3 {
+        width: 25%;
+      }
+      .col-xs-4 {
+        width: 33.33%;
+      }
+      .col-xs-5 {
+        width: 41.66%;
+      }
+      .col-xs-6 {
+        width: 50%;
+      }
+      .col-xs-7 {
+        width: 58.33%;
+      }
+      .col-xs-8 {
+        width: 66.66%;
+      }
+      .col-xs-9 {
+        width: 75%;
+      }
+      .col-xs-10 {
+        width: 83.33%;
+      }
+      .col-xs-11 {
+        width: 91.66%;
+      }
+      .col-xs-12 {
+        width: 100%;
+      }
+      .col-xs-12 div {
+        height: 300px;
+      }
+    }
+
+    /* 태블릿 768px이상 sm */
+
+    @media (min-width:768px) {
+      .col-sm-1 {
+        width: 8.33%;
+      }
+      .col-sm-2 {
+        width: 16.66%;
+      }
+      .col-sm-3 {
+        width: 25%;
+      }
+      .col-sm-4 {
+        width: 33.33%;
+      }
+      .col-sm-5 {
+        width: 41.66%;
+      }
+      .col-sm-6 {
+        width: 50%;
+      }
+      .col-sm-7 {
+        width: 58.33%;
+      }
+      .col-sm-8 {
+        width: 66.66%;
+      }
+      .col-sm-9 {
+        width: 75%;
+      }
+      .col-sm-10 {
+        width: 83.33%;
+      }
+      .col-sm-11 {
+        width: 91.66%;
+      }
+      .col-sm-12 {
+        width: 100%;
+      }
+      .col-sm-12 div {
+        height: 250px;
+      }
+    }
+
+    /* 작은데스크탑 992px이상 md */
+
+    @media (min-width:992px) {
+      .col-md-1 {
+        width: 8.33%;
+      }
+      .col-md-2 {
+        width: 16.66%;
+      }
+      .col-md-3 {
+        width: 25%;
+      }
+      .col-md-4 {
+        width: 33.33%;
+      }
+      .col-md-5 {
+        width: 41.66%;
+      }
+      .col-md-6 {
+        width: 50%;
+      }
+      .col-md-7 {
+        width: 58.33%;
+      }
+      .col-md-8 {
+        width: 66.66%;
+      }
+      .col-md-9 {
+        width: 75%;
+      }
+      .col-md-10 {
+        width: 83.33%;
+      }
+      .col-md-11 {
+        width: 91.66%;
+      }
+      .col-md-12 {
+        width: 100%;
+      }
+      .col-md-6 .color1 {
+        height: 500px;
+      }
+    }
+
+    /* 큰데스크탑 1200px이상 lg */
+
+    @media (min-width:1200px) {
+      .col-lg-1 {
+        width: 8.33%;
+      }
+      .col-lg-2 {
+        width: 16.66%;
+      }
+      .col-lg-3 {
+        width: 25%;
+      }
+      .col-lg-4 {
+        width: 33.33%;
+      }
+      .col-lg-5 {
+        width: 41.66%;
+      }
+      .col-lg-6 {
+        width: 50%;
+      }
+      .col-lg-7 {
+        width: 58.33%;
+      }
+      .col-lg-8 {
+        width: 66.66%;
+      }
+      .col-lg-9 {
+        width: 75%;
+      }
+      .col-lg-10 {
+        width: 83.33%;
+      }
+      .col-lg-11 {
+        width: 91.66%;
+      }
+      .col-lg-12 {
+        width: 100%;
+      }
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+
+    }
+
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    .nanumgothic * {
+      font-family: 'Nanum Gothic', sans-serif;
+    }
+
+    .intro {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav{
+      width: 100%; left: 0; top: 0;
+      background: #000;
+      overflow: hidden
+    }
+    nav.fixed{
+      position: fixed;
+    }
+    nav ul li{ float: left; width: 50%; text-align: center; box-sizing: border-box;}
+    nav ul li:nth-child(1){border-right: 1px solid #fff;}
+    nav ul li a{
+      display: block; line-height: 50px;
+      color: #fff;
+      text-align: 0 0 12px #fff;
+      transition: all 0.7s;
+    }
+    nav ul li a:hover{
+    background: #fff;
+    color: #000;
+    }
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #1e1d1dc4;
+      width: 1678;
+      height: 944px;
+    }
+
+    .intro .layer h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 17px #fff;
+      position: absolute;
+      top: 39%;
+      transform: translateY(-50%);
+      left: 59px;
+    }
+
+    .intro .layer p {
+      font-size: 18px;
+      width: 400px;
+      color: #cec7c7;
+      text-shadow: 0px 0px 3px;
+      position: absolute;
+      top: 48%;
+      left: 9%;
+    }
+
+    .intro .layer button {
+      background: none;
+      border: 0;
+
+    }
+
+    .intro .layer button i {
+      color: #fff;
+      font-size: 4em;
+      text-shadow: 0 0 6px #fff;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 54%;
+      bottom: 10%;
+      animation: bounce 2s linear infinite;
+    }
+
+    .intro .layer img {
+      width: 100px;
+      position: absolute;
+      top: 3%;
+      left: 3%;
+    }
+
+    @keyframes bounce {
+      form {
+        bottom: 90px;
+      }
+      to {
+        bottom: 70px;
+      }
+    }
+
+    /* -------------------------------------------------------- */
+
+    .main1 {
+      position: relative;
+      margin-top: -4px;
+      width: 100%; height: 699px;
+      background: url(images/pro1.jpg) center;
+    }
+
+    .pro {
+      position: absolute;
+      top: 35%;
+      left: 8%;
+      font-size: 55px;
+      color: #fff;
+      text-shadow: 0 0 12px #fff
+    }
+
+    .pro2 {
+      position: absolute;
+      top: 60%;
+      left: 8%;
+      font-size: 15px;
+      width: 600px;
+      color: #fff;
+      text-shadow: 0 0 2px;
+    }
+
+    .main1 img:nth-of-type(1) {
+      max-width: 80px;
+      position: absolute;
+      top: 4%;
+      left: 3%;
+    }
+
+    .main1 button {
+      border: 0;
+      background: #000;
+      color: #fff;
+      padding: 20px 30px;
+      line-height: 20px;
+      border-radius: 5px;
+      position: absolute;
+      top: 78%;
+      left: 8%;
+      box-sizing: border-box;
+      font-size: 25px;
+      transition: all 0.5s
+    }
+
+    .main2 {
+      margin-top: -4px;
+    }
+
+    .main2 .sub1 h1 {
+      font-size: 3em;
+      text-align: left;
+      color: #fff;
+      padding: 65px 0 20px 30px;
+    }
+
+    .main2 .sub1 p {
+      color: #fff;
+      font-size: 16px;
+      width: 50%;
+      padding: 20px 0 20px 20px;
+    }
+
+    .main2 .sub2 h1 {
+      color: #fff;
+      font-size: 3em;
+      text-align: right;
+      padding: 41px 30px 20px 0;
+    }
+
+    .main2 .sub2 p {
+      font-size: 16px;
+      padding-left: 50%;
+      color: #fff;
+      width: 50%;
+    }
+
+    .main1 button:hover {
+      transform: scale(1.2);
+    }
+
+    .bg {
+      height: 600px;
+      background: url(images/pro3.png);
+      position: relative;
+      ;
+      margin-top: -4px;
+    }
+
+    /* -------------------------------------------------------------- */
+    .section{margin-top: -6px;}
+    .box {
+      height: 100vh;
+      background: url(images/mou1.jpg) no-repeat;
+      background-size: cover;
+    }
+
+
+    .product {
+      /* width: 100%;
+      height: 600px;
+      background: #fff; */
+    }
+
+    /* -------------------------------------------------------------- */
+
+    .box .product .imagebox {
+      padding-top: 1000px;
+    }
+
+    .box .product .imagebox ul {
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .box .product .imagebox ul li {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      background: #fff;
+    }
+
+    .box .product .imagebox ul li a>img {
+      min-width: 130px;
+      height: 650px;
+    }
+
+    .box .product .imagebox ul li dl {
+      width: 100%;
+      background: #fff;
+      margin-top: -4px;
+    }
+
+    .box .product .imagebox ul li dl dt {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+
+    /* .imagebox ul li dl dt dd{font-size: 14px; text-align: left;} */
+
+    .dd {
+      font-size: 14px;
+      text-align: left;
+    }
+    #loading {
+     width: 100%;
+     height: 100%;
+     top: 0px;
+     left: 0px;
+     position: fixed;
+     display: block;
+     opacity: 0.8;
+     background-color: #fff;
+     z-index: 99;
+     text-align: center; }
+
+    #loading-image {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     z-index: 100; }
+
+     @media (max-width:767px) {
+        .intro .layer button{
+          color: #fff;
+          position: absolute;
+          bottom: 10%;
+          left: 43%;
+          animation: bounce 2s linear infinite;
+        }
+        .intro .layer h1 {
+        max-width: 411px;
+        }
+        .intro .layer p{
+          max-width: 400px;
+        }
+        .pro{
+        position: absolute;
+        top: 54%;
+        left: 3%;
+        font-size: 36px;
+        color: #fff;
+        text-shadow: 0 0 12px #fff;
+        }
+        .pro2{
+          position: absolute;
+          top: 71%;
+          left: 3%;
+          font-size: 14px;
+          width: 470px;
+          color: #fff;
+          text-shadow: 0 0 2px;
+        }
+        .main1 button{
+          border: 0;
+          background: #000;
+          color: #fff;
+          padding: 20px 10px;
+          line-height: 10px;
+          border-radius: 5px;
+          position: absolute;
+          top: 87%;
+          left: 4%;
+          box-sizing: border-box;
+          font-size: 25px;
+          transition: all 0.5s;
+        }
+        .main2 .sub1 h1{
+          font-size: 3em;
+          text-align: center;
+          color: #fff;
+          padding: 65px 0 20px 30px;
+        }
+        .main2 .sub1 p{
+          color: #fff;
+          font-size: 16px;
+          width: 90%;
+          padding: 38px;
+        }
+        .main2 .sub2 h1{
+          color: #fff;
+          font-size: 3em;
+          text-align: center;
+          padding: inherit;
+        }
+        .main2 .sub2 p{
+          font-size: 16px;
+          color: #fff;
+          width: 90%;
+          padding: 38px;
+        }
+        .box .product .imagebox ul li{
+          float: left;
+          width: 100%;
+          text-align: center;
+          background: #fff;
+        }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="intro" id="">
+    <iframe src="https://player.vimeo.com/video/246779079?autoplay=1&loop=1&color=ff0b03&title=0&byline=0&portrait=0&background=1" width="1678" height="944" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="layer">
+      <img src="images/logo.png" alt="logo">
+      <h1>THE NORTH FACE </h1>
+      <p>The Pro Project was built in partnership with patrollers, guides and heli-ops to deliver the durability they demand for life on the mountain. See how our dependable gear holds up for Darlene Douglas and Marty Gautrey, two local legends from Whistler
+        Blackcomb.
+      </p>
+      <button>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <!-- 네비 -->
+  <nav>
+    <ul>
+      <li><a href="#a">Introduction of item</a></li>
+      <li><a href="#b">product</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div id="a" >
+      <div class="ad">
+        <div class="imgbox main1">
+          <img src="images/logo.png" alt="logo">
+          <h2 class="pro">BUILT BY<br>MOUNTAIN PROS</h2>
+          <p class="pro2">The Pro Project was built in partnership with patrollers, guides and heli-ops to deliver the durability they demand for life on the mountain. See how our dependable gear holds up for Darlene Douglas and Marty Gautrey, two local legends from Whistler
+            Blackcomb.</p>
+          <button>자세히보기</button>
+        </div>
+      </div>
+      <div class="section">
+        <div class="bg">
+          <div class="row main2">
+            <div class="sub1 wow slideInLeft ">
+              <h1>LAYER LIKE A PRO</h1>
+              <p>
+                Marty’s kit keeps him agile by evenly distributing his gear throughout his outer layer, insulated midlayer and bibs. Strategically placed pockets hold his equipment while keeping it accessible, so he can quickly stash his gloves, swap out foggy goggles
+                and minimize his transition time before dropping in.
+              </p>
+            </div>
+            <div class="sub2 wow slideInRight">
+              <h1>DIAL IN YOUR KIT</h1>
+              <p>
+                100-day ski seasons require a kit that provides multi-layer protection from the elements. Darlene bootpacks out-of-bounds in a Gore-TexR Pro 3L shell that’s reinforced with abrasion-resistant shoulders and weatherproof ski pants with durable kickpatch
+                cuffs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box" id="b">
+      <div class="product">
+        <div class="imagebox">
+          <ul>
+            <li>
+              <a href="#">
+                  <img src="images/north1.jpg" alt="Fuse Brigandine SET">
+                </a>
+              <dl>
+                <dt>Fuse Brigandine SET</dt>
+                <dd class="dd">We’ve set a new standard for performance and protection in big-mountain riding with our new GORE-TEX jacket that features FuseForm™ construction and an ergonomic fit. Strategically placed pockets seamlessly integrate with bibs and mid
+                  layers.
+                </dd>
+            </li>
+            <li>
+              <a href="#"><img src="images/north2.jpg" alt="" alt="Unlimited SET">
+                </a>
+              <dl>
+                <dt>Unlimited SET</dt>
+                <dd class="dd">For extra warmth and comfort in the coldest climates, this 800-fill down mid layer features athlete-requested, strategically mapped insulation and a woven-baffle construction. Strategically placed pockets seamlessly integrate with bibs
+                  and jackets.</dd>
+              </dl>
+            </li>
+            <li>
+              <a href="#">
+                  <img src="images/north3.jpg" alt="" alt="Purist Triclimate SET">
+                </a>
+              <dl>
+                <dt>Purist Triclimate SET</dt>
+                <dd class="dd">
+                  For extra warmth and comfort in the coldest climates, this 800-fill down mid layer features athlete-requested, strategically mapped insulation and a woven-baffle construction. Strategically placed pockets seamlessly integrate with bibs and jackets.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 스크립트 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+  // 스크롤 위치 확인요
+  $(window).scroll(function(){
+    var a=$('#a').offset().top;
+    var b=$('#b').offset().top;
+    var wscroll=$(window).scrollTop();
+    // console.log(a,b,c,wscroll);
+    //인덱스화 확인요
+    var index;
+    if(wscroll>=a && wscroll<b){
+      index=0;
+    }else if(wscroll>=b){
+      index=1;
+    }
+    //요건 네비 고정임
+    if (wscroll>=a-100){
+      $('nav').addClass('fixed');
+    }else{
+      $('nav').removeClass('fixed');
+    }
+  })
+
+  //네비 누르면 해당컨텐츠 이동
+  $('nav a').click(function(e){
+    if(this.hash !=="" ){//<==해시가머지?
+      e.preventDefault();//링 초
+      var hash=this.hash;//<==머냐고
+      $('html, body').animate({
+        scrollTop:$(hash).offset().top
+      },800, function(){
+        window.location.href=hash;//도메인에 해시코드값 변경이래
+      })
+    }
+  })
+
+  $('.intro button').click(function(){
+    //a컨텐츠 위치에서 네비게이션높이만큼 빼기이
+    $('html, body').animate({
+      scrollTop:$('#a').offset().top-100
+    },800);
+  })
+  </script>
+  <script src="dist/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <script type="text/javascript">
+  $(window).load(function() {
+       $('#loading').hide();
+      });
+  </script>
+  <div id="loading"><img id="loading-image" src="images/loder.gif" alt="Loading..." /></div>
+</body>
+</html>
