@@ -118,6 +118,20 @@ header nav ul li{height: 80px; line-height: 80px;}
    transform: skewY(-5deg) translateY(-95px);
     background: #fff;
   }
+.art1 .art1-wrap .left{position: relative;}
+.art1 .art1-wrap .left h1{margin-bottom: 180px;}
+.art1 .art1-wrap .left .txt{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 50px;
+  text-align: justify;
+  width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #132f46;
+  background: #132f46;
+  color: #fff;
+}
 /* .tri1{ z-index: 100; background: url(../images/bgtop1.png) no-repeat;} */
 .art1 .art1-wrap{overflow-x: hidden; text-align: center; transform: skewY(5deg);}
 .art1 .art1-wrap h1{margin-top: 100px;}
@@ -207,19 +221,47 @@ footer small{
 
 /* 미디어 쿼리  */
 @media (max-width: 768px){
+  header nav > img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 40px;}
   .art1{position: relative;}
   .art1 .art1-wrap{overflow-x: hidden; text-align: center;}
   .art1 .art1-wrap h1{margin-top: 55px;}
-  .art1 .art1-wrap .left{float: inherit; width: 100%; height: 100vh;}
-
-
+  .art1 .art1-wrap .left{float: inherit; width: 100%; height: 100vh; padding-top: 125px;}
 
   .art1 .art1-wrap .right{float: inherit; width: 100%; height: 100vh;}
-  .art1 .art1-wrap .right .txt{margin-top: 70px;}
+  .art1 .art1-wrap .right .txt{margin-top: 30px;}
   .art1 .art1-wrap .right .txt div p{font-size: 22px; font-weight: bold;}
-  .art1 .art1-wrap .right .txt ul{margin: 40px 0 40px 0;}
+  .art1 .art1-wrap .right .txt ul{margin: 20px 0 40px 0;}
   .art1 .art1-wrap .right .txt ul li{font-size: 15px; margin-bottom:5px;}
   .art1 .art1-wrap .right .txt ul li i{margin-right: 6px;}
+  .art1 .art1-wrap .left .txt{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 50px;
+    text-align: justify;
+    width: 380px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #132f46;
+    background: #132f46;
+    color: #fff;
+  }
 
-
+}
+@media (min-width: 769px) and (max-width: 1250px){
+  .art1 .art1-wrap .left .txt{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 50px;
+    text-align: justify;
+    width: 450px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #132f46;
+    background: #132f46;
+    color: #fff;
+  }
 }
