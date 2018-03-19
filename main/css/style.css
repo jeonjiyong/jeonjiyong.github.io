@@ -249,7 +249,8 @@ footer small{
     background: #132f46;
     color: #fff;
   }
-
+.art1 .art1-wrap .left h1{
+  margin-bottom: 80px;}
 }
 @media (min-width: 769px) and (max-width: 1250px){
   .art1 .art1-wrap .left .txt{
